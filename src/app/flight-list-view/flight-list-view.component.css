@@ -1,0 +1,59 @@
+.flights-container {
+    font-size: x-large;
+    margin-top: 1.5rem;
+    border-style: solid;
+    padding: .5rem;
+    height: 70vh;
+    border-radius: .5rem;
+    overflow-y: scroll;
+}
+
+.else-list-block-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    margin: .5rem;
+    span {
+        margin-left: .25rem;
+    }
+}
+
+.flight-item {
+    min-height: 80px;
+    display: inline-block;
+}
+
+.flights-title {
+    margin-bottom: 1rem;
+    margin-left: .5rem;
+    display: flex;
+    flex: 1 0 auto;
+    .remove-all {
+        border-radius: 1rem;
+        height: auto;
+        min-width: auto;
+        margin-left: 1rem;
+    }
+}
+
+.flex-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.class-filters {
+    margin-bottom: .5rem;
+    margin-left: .5rem;
+    font-size: medium;
+    .class-flex {
+        margin-left: .5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span {
+            font-size: x-large;
+        }
+    }
+}

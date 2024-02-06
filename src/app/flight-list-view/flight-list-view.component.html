@@ -1,0 +1,51 @@
+<div class="flights-container">
+    <mat-card>
+        <div class="checkins-header">
+            <div class="flights-title">
+                Number of Flights: {{ flights.length }}
+                <button mat-stroked-button class="remove-all" color="primary" (click)="removeAllFlights.emit()">
+                    Remove All
+                </button>
+            </div>
+
+            <!--Class Filter Chips-->
+            <div class="class-filters">
+                <mat-chip-listbox (change)="doFilter($event)" aria-label="style selection">
+                    <div class="class-flex">
+                        <span>Filter by:</span> <mat-chip-option *ngFor="let style of flightClasses">{{ style }}</mat-chip-option>
+                    </div>
+                </mat-chip-listbox>
+            </div>
+            <mat-divider></mat-divider>
+        </div>
+
+        <!--List of Flights-->
+        <div class="flight-list" *ngIf="visibleFlightList.length; else elseListBlock">
+            <div *ngFor="let flight of visibleFlightList">
+                <mat-action-list>
+                    <div class="flex-box">
+                        <button mat-list-item class="flight-item" (click)="selectFlight.emit(flight)">
+                            <b>Name:</b> {{ flight.name }}
+                            <div>
+                                <b>Seat Number:</b> {{ flight.seatNumber }}
+                            </div>
+                            <div>
+                                <b>Class:</b> {{ flight.flightClass }}
+                            </div>
+                        </button>
+                        <button class="remove" mat-button (click)="deleteFlight.emit(flight)">
+                            <mat-icon>delete</mat-icon>
+                        </button>
+                    </div>
+                </mat-action-list>
+                <mat-divider></mat-divider>
+            </div>
+        </div>
+        <ng-template #elseListBlock>
+            <p class="else-list-block-text">
+                No Flights <span><mat-icon>mood_bad</mat-icon></span>
+            </p>
+        </ng-template>
+    </mat-card>
+</div>
+
