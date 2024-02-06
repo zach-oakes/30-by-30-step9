@@ -1,0 +1,42 @@
+.flight-form {
+    border-style: solid;
+    padding: .5rem;
+    height: 70vh;
+    border-radius: .5rem;
+}
+
+.radio-buttons {
+    margin-bottom: .625rem;
+}
+
+.flex-table {
+    display: flex;
+    margin-top: .625rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit-add-form-title {
+    font-size: x-large;
+    margin-bottom: 1rem;
+    margin-left: .5rem;
+}
+
+.edit-add-flight-container {
+    margin-top: 1.5rem;
+    height: 60vh;
+    flex: 1 1 0;
+}
+
+.departure-date-picker,
+.arrival-date-picker,
+.review-text-area {
+    margin-bottom: .5rem;
+}
+
+.invalid-arrival,
+.invalid-departure {
+    margin: .25rem .25rem;
+    color: red;
+}
